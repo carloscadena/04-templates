@@ -12,8 +12,8 @@
     <link rel="icon" type="image/x-icon" href="https://avatars2.githubusercontent.com/u/18607604?v=3&s=200">
 
     <script id="article-template" type="text/x-handlebars-template">
-
-      <article class="template" data-category="{{category}}" data-author="{{author}}">
+      <!-- The template for our blog articles. -->
+      <article data-category="{{category}}" data-author="{{author}}">
          <header>
            <h1>{{title}}</h1>
            <div class="byline">
@@ -21,7 +21,7 @@
              published <time pubdate datetime="2000-01-01">{{publishedOn}}</time>
            </div>
          </header>
-         <section class="article-body">{{body}}</section>
+         <section class="article-body">{{{body}}}</section>
          <a href="#" class="read-on">Read on &rarr;</a>
        </article>
     </script>
@@ -79,10 +79,8 @@
     <footer>
       &copy; 2017 Code Fellows | Static Blog | Happy Ipsum!
     </footer>
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-
-    <script src"https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js"></script>
     <script src="scripts/blogArticles.js"></script>
     <script src="scripts/article.js"></script>
     <script src="scripts/articleView.js"></script>
